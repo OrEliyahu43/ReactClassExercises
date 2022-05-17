@@ -1,0 +1,19 @@
+.box{
+    position: absolute;
+    left: -200px;
+    height: 200px;
+    width: 200px;
+    
+    animation: left-to-right 1s ease-in forwards;
+    background-color: blue;
+    
+    
+    }
+    
+    @keyframes left-to-right{
+    
+        100%{
+            transform: translateX(200px);
+    
+        }
+    }

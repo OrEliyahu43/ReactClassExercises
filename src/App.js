@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import ButtonComponent from './exercises/4.1/ButtonComponent.js';
-import Ex81 from './exercises/17.05.22/Ex81.js';
+import Ex82 from './exercises/17.05.22/Ex8.2.js';
 function App() {
   return (
-    <Ex81 />
+    <Ex82 />
   );
 };
 
