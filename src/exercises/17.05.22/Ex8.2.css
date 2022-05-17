@@ -17,3 +17,39 @@
     
         }
     }
+        @keyframes left-to-right1{
+    
+            100%{
+                transform: translateX(220px);
+        
+            }
+        }
+        @keyframes left-to-right2{
+    
+            100%{
+                transform: translateX(100px);
+        
+            }
+        }
+   
+
+    .box2{
+        position: absolute;
+        left: -220px;
+        height: 300px;
+        width: 220px;
+        top:200px;
+        
+        animation: left-to-right1 1s ease-in forwards;
+        background-color: red;
+    }
+
+    .box3{
+        position: absolute;
+        left: -100px;
+        height: 100px;
+        width: 100px;
+        top:500px;
+        animation: left-to-right2 1s ease-in forwards;
+        background-color: teal;
+    }

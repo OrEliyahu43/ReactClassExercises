@@ -14,14 +14,23 @@ export default class Ex82 extends React.Component{
 
 
     render(){
-        // return( this.state.boxDisapear === false ?
-        //     <div class="box"> </div>              another way
-        //     :<div></div>
-       return(
-           <div>
-        {!this.state.boxDisapear && <div className="box"></div>}
-           </div>
-       )
+        return( this.state.boxDisapear === false ?
+            <div>
+            <div class="box"></div>            
+            <div class="box2"> </div>            
+            <div class="box3"> </div>            
+            </div>
+            :
+            <div></div>
+
+        )
+
+
+    //    return(
+    //        <div>
+    //     {!this.state.boxDisapear && <div className="box"></div>}
+    //        </div>
+    //    )
     }   
 }
 
