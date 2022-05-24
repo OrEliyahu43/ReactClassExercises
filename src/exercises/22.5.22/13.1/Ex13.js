@@ -1,49 +1,40 @@
 import React from "react";
 import { data } from "./data";
+import NamesList from "./NamesList";
+import { getDataName, getBefore90 } from "./utilize";
+import Card from './Card.js'
 
 export default class Ex131 extends React.Component {
     state = {
-        namesData : '',
-        before1990Data : '',
+        namesData: [],
+        before1990Data: [],
         namesJSX: '',
     }
 
-    getDataName = () => {
 
-        const names = data.map(obj => obj.name)
-        this.setState({namesData: names})
-    }
 
-    getBefore90 = () => {
-        const before = data.map(obj => {
-            const year = obj.birthday.split('-')[2];
-            if(parseInt(year)<1990)
-            return obj;
-        })
-        this.setState({before1990Data: before})
-    }
 
-    componentDidMount(){
-        this.getBefore90()
-        this.getDataName();
+    componentDidMount() {
+        this.setState({
+            before1990Data: getBefore90(),
 
+            namesData: getDataName()
+        }
+
+        )
 
     }
-    drawName = () => {
-        const names = this.state.namesData.map((name, index) =>{
-            return <div key={index}>{name}</div>
-            
-        } )
-            this.setState({namesJSX : names})
-    }
+  
 
 
 
+    render() {
 
-    render(){
-
-        return(
-            <div></div>
+        return (
+            <div>
+                <NamesList  names={this.state.namesData}/>
+                <Card before={this.state.before1990Data}/>
+            </div>
         )
     }
 }
